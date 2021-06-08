@@ -16,15 +16,16 @@
             }
             /* navigation menu */
             nav {
-                background: rgb(239, 80, 41);
+                background: rgb(219, 112, 147);
                 margin: 0 auto;
+                margin-bottom: 20px;
                 display: flex; 
                 padding: 10px;
             }
             h1 {
                 display: flex;
                 align-items: center;
-                color: white;
+                color: rgb(54, 135, 189);
                 flex: 1;
                 margin: 0;
             }
@@ -37,7 +38,7 @@
             }
             a {
                 text-decoration: none;
-                color: #fff;
+                color: rgb(0, 0, 128);
             }
 
             /* main container area beneath menu */
@@ -68,15 +69,17 @@
     
     <body>
         <!-- All content goes here -->
-        
+        <div id="all-content >
+
+        </div>
         <div>
             <nav>
                  <h1>Chloe's Awesome Website</h1>
-                 <ul>
-                     <li>
+                 <ul id="nav-ul">
+                     <li class="nav-li">
                          <a href="index.html" > Home </a>
                      </li>
-                     <li>
+                     <li class="nav-li">
                          <a href="portfolio.html" > Portfolio </a>
                      </li>
                  </ul>
@@ -84,16 +87,16 @@
 
             <main>
                 <!-- Sidebar section -->
-                <div>
-                      <img scr="https://www.almanac.com/sites/default/files/users/AlmanacStaffArchive/peony-easy-perennial_full_width.jpg"
+                <div class="sidebar">
+                      <img class="sidebar-img" scr="https://www.almanac.com/sites/default/files/users/AlmanacStaffArchive/peony-easy-perennial_full_width.jpg"
                 </div>
 
                 <!-- Content section -->
-                <div>
+                <div class="content">
                    <h2>Chloe</h2> 
                    <p>Student at Southside High</p>
                 <!-- Interest section-->
-                <div>
+                <div id="interests">
                     <h3>Interest</h3>
                     <ul> 
                         <li>Baking and Cooking</li>
