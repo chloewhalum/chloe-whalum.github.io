@@ -40,6 +40,12 @@
         createPlatform(400, 250);
         createPlatform(170, 460, 0.5);
         
+        createPlatform(100, 150);       // normal platform
+        createPlatform(150, 250, 0.25)    // small horizontal platform (10% the normal width)
+        createPlatform(205, 335, 0.4, .65) //  vertical wall (5% the normal width)
+        createPlatform(300, 360);         //  normal platform
+        createPlatform(375, 450, 4.5, 0.5)   // small horizontal platform (10% the normal width and 4.5x the height)
+
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
     }
