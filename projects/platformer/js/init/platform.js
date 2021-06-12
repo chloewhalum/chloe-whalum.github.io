@@ -38,9 +38,10 @@
 
         // example:
         createPlatform(450, 450);
-        createPlatform(300, 560, 0.5); // small platform
+        createPlatform(300, 560, 0.5); // normal platform
         createPlatform(590, 250);  // normal platform
         createPlatform(525, 350); //  normal platform
+        createPlatform(200, 250, 0.5); // small platform
         
 
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
