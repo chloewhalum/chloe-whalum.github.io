@@ -32,11 +32,15 @@ var init = function (window) {
              }
 
         // TODO 3 / 8 : Call the drawCircle() function 
-             drawCircle();
-             drawCircle();
-             drawCircle();
-             drawCircle();
-             drawCircle();
+           drawCircle();
+           drawCircle();
+           drawCircle();
+           drawCircle();
+           drawCircle();
+
+        for (var loopsCompleted = 0; loopsCompleted , 10; loopsCompleted++) {
+                 drawCircle();
+             }
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
@@ -49,17 +53,32 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            physikz.updatePosition(circles["0"]);
-            physikz.updatePosition(circles["1"]);
-            physikz.updatePosition(circles["2"]);
-            physikz.updatePosition(circles["3"]);
-            physikz.updatePosition(circles["4"]);
+            // I have created a loop to prevent from not following the DRY method
+                  physikz.updatePosition(circles["0"]);
+	              physikz.updatePosition(circles["1"]);
+	              physikz.updatePosition(circles["2"]);
+	              physikz.updatePosition(circles["3"]);
+	              physikz.updatePosition(circles["4"]);
+
+            for (var eachCircle = 0; eachCircle < circles.length; eachCircle++) {
+                  eachValue = circles[eachCircle];
+                  physikz.updatePosition(eachCircle)
+                  game.checkCirclePosition(eachCircle)
+            }
 
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-           
+            game.checkCirclePosition(circles["0"]);
+            game.checkCirclePosition(circles["1"]);
+            game.checkCirclePosition(circles["2"]);
+            game.checkCirclePosition(circles["3"]);
+            game.checkCirclePosition(circles["4"]);
 
             // TODO 9 : Iterate over the array
-           
+            for (var eachCircle = 0; eachCircle < circles.length; eachCircle++) {
+                eachValue = circles[eachCircle];
+                physikz.updatePosition(eachCircle)
+                game.checkCirclePosition(eachCircle)
+          }
             
         }
     
@@ -76,8 +95,19 @@ var init = function (window) {
             }
             
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
-            
-
+           
+            // if the circle has gone past the LEFT side of the screen then place it on the RIGHT 
+            if (circle.x < canvas.width) {
+                circle.x = 0;
+            }
+            // if the circle has gone DOWN past the screen then place it upward
+            if (circle.y > canvas.height) {
+                circle.y = 0;
+            }
+            // if the circle has gone UP past the screen then place it downward
+            if (circle.y < canvas.height) {
+                circle.y = 0;
+            }
 
             // YOUR TODO 7 CODE ENDS HERE //////////////////////////
         }
