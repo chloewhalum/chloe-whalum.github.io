@@ -55,6 +55,13 @@ var init = function (window) {
             // TODO 4 : Update the circle's position //
             // A loop/iteration has been created inplace of repeatedly calling functions
                   
+            physikz.updatePosition(circles[0]);
+	        physikz.updatePosition(circles[1]);
+	        physikz.updatePosition(circles[2]);
+	        physikz.updatePosition(circles[3]);
+	        physikz.updatePosition(circles[4]);
+           
+            
             for (var eachCircle = 0; eachCircle < circles.length; eachCircle++) {
                   eachValue = circles[eachCircle];
                   physikz.updatePosition(eachCircle)
@@ -63,6 +70,13 @@ var init = function (window) {
 
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
             // A loop/iteration has been created inplace of repeatedly calling functions
+           
+            game.checkCirclePosition(circles[0]);
+            game.checkCirclePosition(circles[1]);
+            game.checkCirclePosition(circles[2]);
+            game.checkCirclePosition(circles[3]);
+            game.checkCirclePosition(circles[4] );
+
 
             // TODO 9 : Iterate over the array
            
@@ -113,7 +127,7 @@ var init = function (window) {
         
         app.addUpdateable(window.opspark.game);
     }
-}
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
