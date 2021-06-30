@@ -26,7 +26,7 @@ var init = function (window) {
         // TODO 2 : Create a function that draws a circle 
              function drawCircle() {
                 circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
-                physikz.addRandomVelocity(circle, canvas, 10, 10);
+                physikz.addRandomVelocity(circle, canvas);
                 view.addChild(circle);
                 circles.push(circle);
              }
@@ -36,7 +36,7 @@ var init = function (window) {
            drawCircle();
            drawCircle();
            drawCircle();
-                }
+        
 
            for (var loopsCompleted = 0; loopsCompleted < 100; loopsCompleted++) {
                drawCircle();
@@ -56,13 +56,20 @@ var init = function (window) {
         function update() {
             // TODO 4 : Update the circle's position //
             // A loop/iteration has been created inplace of repeatedly calling functions
-        
+            
+            physikz.updatePosition(circles[0]);
+            physikz.updatePosition(circles[1]);
+            physikz.updatePosition(circles[2]);
+            physikz.updatePosition(circles[3]);
+            physikz.updatePosition(circles[4]);
+
 
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
             // A loop/iteration has been created inplace of repeatedly calling functions
-           
+            
 
             // TODO 9 : Iterate over the array
+
             for (var eachCircle = 0; eachCircle < circles.length; eachCircle++) {
                 eachCircle = circles[eachCircle];
                 physikz.updatePosition(eachCircle);
@@ -115,7 +122,7 @@ var init = function (window) {
         
         app.addUpdateable(window.opspark.game);
     }
-
+};
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
